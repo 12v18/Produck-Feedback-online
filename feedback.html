@@ -1,0 +1,71 @@
+{% extends "layout.html" %}
+
+{% block title %}Feedback - GS Mx 7{% endblock %}
+
+{% block content %}
+<div class="feedback-page">
+    <div class="container">
+        <div class="feedback-header">
+            <h1>We Value Your Feedback</h1>
+            <p>Share your experience with the GS Mx 7 and help us improve our products</p>
+        </div>
+        
+        <div class="feedback-form-container">
+            <div class="feedback-form-box">
+                <h2>Submit Your Feedback</h2>
+                
+                <form id="feedbackForm" class="feedback-form" method="POST" action="{{ url_for('feedback') }}">
+                    <div class="form-group">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" id="name" name="name" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" id="email" name="email" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label class="form-label">Rating</label>
+                        <div class="star-rating">
+                            <span class="star" data-rating="1">★</span>
+                            <span class="star" data-rating="2">★</span>
+                            <span class="star" data-rating="3">★</span>
+                            <span class="star" data-rating="4">★</span>
+                            <span class="star" data-rating="5">★</span>
+                        </div>
+                        <input type="hidden" id="rating" name="rating" value="0" required>
+                        <div class="rating-text">
+                            <span id="ratingText">Please select a rating</span>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="comment" class="form-label">Comment</label>
+                        <textarea id="comment" name="comment" class="form-textarea" rows="5" placeholder="Tell us about your experience with GS Mx 7..." required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Submit Feedback</span>
+                            <span class="btn-loading" style="display: none;">Submitting...</span>
+                        </button>
+                    </div>
+                </form>
+                
+                <div id="successMessage" class="success-message" style="display: none;">
+                    <div class="success-icon">✓</div>
+                    <h3>Thank You!</h3>
+                    <p>Your feedback has been submitted successfully. We appreciate your input!</p>
+                </div>
+                
+                <div id="errorMessage" class="error-message" style="display: none;">
+                    <div class="error-icon">⚠</div>
+                    <h3>Error</h3>
+                    <p>There was an error submitting your feedback. Please try again.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

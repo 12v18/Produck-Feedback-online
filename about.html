@@ -1,0 +1,201 @@
+{% extends "layout.html" %}
+
+{% block title %}About Us - GS Mobile{% endblock %}
+
+{% block content %}
+<div class="about-page">
+    <!-- Hero Section -->
+    <div class="about-hero">
+        <div class="container">
+            <h1>About GS Mobile</h1>
+            <p>Innovating Mobile Technology Since 2015</p>
+        </div>
+    </div>
+
+    <!-- Company Story Section -->
+    <section class="company-story">
+        <div class="container">
+            <div class="story-content">
+                <h2>How GS Started</h2>
+                <div class="story-text">
+                    <p>GS Mobile began its journey in 2015 with a simple vision: to create affordable, high-quality smartphones that combine cutting-edge technology with elegant design. What started as a small startup in Guntur, Andhra Pradesh, has now grown into one of India's most trusted mobile phone brands.</p>
+                    
+                    <p>Our founders recognized a gap in the market for premium smartphones at accessible prices. With a team of passionate engineers and designers, GS Mobile set out to revolutionize the mobile industry by focusing on user experience, build quality, and innovative features.</p>
+                    
+                    <p>Over the years, we have consistently delivered products that exceed customer expectations. From our first smartphone, the GS Alpha, to our latest flagship, the GS Mx 7, we have maintained our commitment to excellence and innovation.</p>
+                    
+                    <p>Today, GS Mobile is proud to serve millions of customers across India and beyond, with a growing presence in international markets. Our success is built on trust, quality, and our unwavering dedication to customer satisfaction.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Branches Section -->
+    <section class="branches-section">
+        <div class="container">
+            <h2 class="section-title">Our Branches</h2>
+            <div class="branches-grid">
+                <div class="branch-card">
+                    <div class="branch-image">
+                        <img src="{{ url_for('static', filename='images/branch-hyderabad.jpg') }}" alt="Hyderabad Branch">
+                    </div>
+                    <div class="branch-info">
+                        <h3>Hyderabad Branch</h3>
+                        <p>Our technology hub in Hyderabad focuses on research and development, bringing the latest innovations to our smartphone lineup. This branch houses our primary R&D center and employs over 500 skilled professionals.</p>
+                        <div class="branch-stats">
+                            <span class="stat">500+ Employees</span>
+                            <span class="stat">R&D Center</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="branch-card">
+                    <div class="branch-image">
+                        <img src="{{ url_for('static', filename='images/branch-bangalore.jpg') }}" alt="Bangalore Branch">
+                    </div>
+                    <div class="branch-info">
+                        <h3>Bangalore Branch</h3>
+                        <p>Our Bangalore office serves as the software development center, where our talented team works on creating intuitive user interfaces and optimizing performance for GS smartphones.</p>
+                        <div class="branch-stats">
+                            <span class="stat">300+ Developers</span>
+                            <span class="stat">Software Hub</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="branch-card">
+                    <div class="branch-image">
+                        <img src="{{ url_for('static', filename='images/branch-chennai.jpg') }}" alt="Chennai Branch">
+                    </div>
+                    <div class="branch-info">
+                        <h3>Chennai Branch</h3>
+                        <p>Our Chennai facility is our primary manufacturing unit, equipped with state-of-the-art production lines that ensure each GS smartphone meets our highest quality standards.</p>
+                        <div class="branch-stats">
+                            <span class="stat">1000+ Workers</span>
+                            <span class="stat">Manufacturing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Founder Section -->
+    <section class="founder-section">
+        <div class="container">
+            <div class="founder-content">
+                <div class="founder-image">
+                    <img src="{{ url_for('static', filename='images/founder-gs.jpg') }}" alt="Mr. Ganesh Sharma - Founder">
+                </div>
+                <div class="founder-info">
+                    <h2>Meet Our Founder</h2>
+                    <h3>Mr. Ganesh Sharma</h3>
+                    <p class="founder-title">Founder & CEO</p>
+                    
+                    <div class="founder-description">
+                        <p>Mr. Ganesh Sharma, a visionary entrepreneur and technology enthusiast, founded GS Mobile in 2015 with a dream to democratize smartphone technology in India. With over 15 years of experience in the telecommunications industry, he recognized the need for high-quality, affordable smartphones that could compete with international brands.</p>
+                        
+                        <p>Born and raised in Guntur, Andhra Pradesh, Mr. Sharma completed his engineering degree from IIT Madras and worked with several multinational companies before starting his entrepreneurial journey. His passion for innovation and commitment to excellence have been the driving forces behind GS Mobile's success.</p>
+                        
+                        <p>Under his leadership, GS Mobile has grown from a small startup to a major player in the Indian smartphone market. His vision of "Technology for Everyone" continues to guide the company's mission to create accessible, cutting-edge mobile solutions.</p>
+                        
+                        <p>"Every smartphone we create is a step towards bridging the digital divide and empowering people through technology," says Mr. Sharma about his company's mission.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Office Section -->
+    <section class="main-office-section">
+        <div class="container">
+            <h2 class="section-title">Our Main Office</h2>
+            <div class="office-content">
+                <div class="office-info">
+                    <h3>GS Mobile Headquarters</h3>
+                    <div class="address-details">
+                        <div class="address-item">
+                            <span class="address-icon">📍</span>
+                            <div class="address-text">
+                                <p><strong>Address:</strong></p>
+                                <p>GS Mobile Technology Park<br>
+                                Plot No. 123, Sector 5<br>
+                                Guntur Technology Hub<br>
+                                Guntur - 522001<br>
+                                Andhra Pradesh, India</p>
+                            </div>
+                        </div>
+                        
+                        <div class="address-item">
+                            <span class="address-icon">📞</span>
+                            <div class="address-text">
+                                <p><strong>Phone:</strong> +91 863 234 5678</p>
+                            </div>
+                        </div>
+                        
+                        <div class="address-item">
+                            <span class="address-icon">✉️</span>
+                            <div class="address-text">
+                                <p><strong>Email:</strong> info@gsmobile.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="address-item">
+                            <span class="address-icon">🌐</span>
+                            <div class="address-text">
+                                <p><strong>Website:</strong> www.gsmobile.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="office-image">
+                    <img src="{{ url_for('static', filename='images/gs-headquarters.jpg') }}" alt="GS Mobile Headquarters">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Custom Build Section -->
+    <section class="custom-build-section">
+        <div class="container">
+            <div class="custom-build-box">
+                <div class="custom-build-content">
+                    <h2>Custom Build Your GS Phone</h2>
+                    <p>Want a smartphone that's truly yours? With our custom build option, you can personalize your GS phone according to your specific needs and preferences.</p>
+                    
+                    <div class="custom-features">
+                        <div class="feature-list">
+                            <div class="feature-item">
+                                <span class="feature-icon">⚙️</span>
+                                <span>Choose Your Processor</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">💾</span>
+                                <span>Select RAM & Storage</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">📸</span>
+                                <span>Customize Camera Setup</span>
+                            </div>
+                            <div class="feature-item">
+                                <span class="feature-icon">🎨</span>
+                                <span>Pick Your Color & Design</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="custom-description">Our expert engineers will work with you to create a smartphone that perfectly matches your lifestyle and requirements. From gaming enthusiasts to photography professionals, we can build the perfect device for you.</p>
+                    
+                    <div class="custom-build-action">
+                        <button id="customBuildBtn" class="custom-build-btn">
+                            <span class="btn-icon">🔧</span>
+                            Start Custom Build
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock %}
