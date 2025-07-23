@@ -1,0 +1,183 @@
+{% extends "layout.html" %}
+
+{% block title %}GS Mx 7 - Premium Smartphone{% endblock %}
+
+{% block content %}
+<div class="hero-section">
+    <div class="hero-content">
+        <h1 class="hero-title">GS Mx 7</h1>
+        <p class="hero-subtitle">Experience the Future of Mobile Technology</p>
+        <div class="hero-images">
+            <div class="main-phone-image">
+                <img src="{{ url_for('static', filename='images/gs-mx7-main.png') }}" alt="GS Mx 7 Main" class="phone-img active">
+                <img src="{{ url_for('static', filename='images/gs-mx7-2.png') }}" alt="GS Mx 7 View 2" class="phone-img">
+                <img src="{{ url_for('static', filename='images/gs-mx7-3.png') }}" alt="GS Mx 7 View 3" class="phone-img">
+                <img src="{{ url_for('static', filename='images/gs-mx7-4.png') }}" alt="GS Mx 7 View 4" class="phone-img">
+                <img src="{{ url_for('static', filename='images/gs-mx7-5.png') }}" alt="GS Mx 7 View 5" class="phone-img">
+                <img src="{{ url_for('static', filename='images/gs-mx7-6.png') }}" alt="GS Mx 7 View 6" class="phone-img">
+                <img src="{{ url_for('static', filename='images/gs-mx7-7.png') }}" alt="GS Mx 7 View 7" class="phone-img">
+            </div>
+            <div class="image-thumbnails">
+                <img src="{{ url_for('static', filename='images/gs-mx7-main.png') }}" alt="View 1" class="thumbnail active" data-index="0">
+                <img src="{{ url_for('static', filename='images/gs-mx7-2.png') }}" alt="View 2" class="thumbnail" data-index="1">
+                <img src="{{ url_for('static', filename='images/gs-mx7-3.png') }}" alt="View 3" class="thumbnail" data-index="2">
+                <img src="{{ url_for('static', filename='images/gs-mx7-4.png') }}" alt="View 4" class="thumbnail" data-index="3">
+                <img src="{{ url_for('static', filename='images/gs-mx7-5.png') }}" alt="View 5" class="thumbnail" data-index="4">
+                <img src="{{ url_for('static', filename='images/gs-mx7-6.png') }}" alt="View 6" class="thumbnail" data-index="5">
+                <img src="{{ url_for('static', filename='images/gs-mx7-7.png') }}" alt="View 7" class="thumbnail" data-index="6">
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="features-section">
+    <div class="container">
+        <h2 class="section-title">Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="icon-battery"></i>
+                </div>
+                <h3>5000 mAh Battery</h3>
+                <p>All-day power that keeps you connected. Long-lasting battery life for your busy lifestyle.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="icon-charging"></i>
+                </div>
+                <h3>Quick Charging</h3>
+                <p>Fast charging technology that gets you back to 100% in no time. Quick charge adapter included.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="icon-camera"></i>
+                </div>
+                <h3>Advanced Camera</h3>
+                <p>Capture life's moments with stunning clarity and professional-quality photos.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="icon-performance"></i>
+                </div>
+                <h3>High Performance</h3>
+                <p>Smooth performance for gaming, streaming, and multitasking with advanced processor.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="icon-display"></i>
+                </div>
+                <h3>Premium Display</h3>
+                <p>Immersive viewing experience with vibrant colors and crystal-clear resolution.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="icon-security"></i>
+                </div>
+                <h3>Enhanced Security</h3>
+                <p>Advanced biometric security features to keep your data safe and secure.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="specifications-section">
+    <div class="container">
+        <h2 class="section-title">Technical Specifications</h2>
+        <div class="specs-grid">
+            <div class="spec-item">
+                <span class="spec-label">Battery Capacity</span>
+                <span class="spec-value">5000 mAh</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Charging</span>
+                <span class="spec-value">Quick Charge 3.0</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Display</span>
+                <span class="spec-value">6.7" AMOLED</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Storage</span>
+                <span class="spec-value">128GB / 256GB</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">RAM</span>
+                <span class="spec-value">8GB / 12GB</span>
+            </div>
+            <div class="spec-item">
+                <span class="spec-label">Camera</span>
+                <span class="spec-value">108MP Triple Camera</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="similar-phones-section">
+    <div class="container">
+        <h2 class="section-title">Similar Models</h2>
+        <div class="similar-phones-grid">
+            <div class="phone-card">
+                <div class="phone-image">
+                    <img src="{{ url_for('static', filename='images/gs-mx5.png') }}" alt="GS Mx 5">
+                </div>
+                <div class="phone-info">
+                    <h3>GS Mx 5</h3>
+                    <p class="phone-price">₹24,999</p>
+                    <ul class="phone-features">
+                        <li>4500 mAh Battery</li>
+                        <li>6.4" Display</li>
+                        <li>64MP Camera</li>
+                        <li>6GB RAM</li>
+                    </ul>
+                    <button class="btn-secondary">View Details</button>
+                </div>
+            </div>
+            <div class="phone-card">
+                <div class="phone-image">
+                    <img src="{{ url_for('static', filename='images/gs-mx6.png') }}" alt="GS Mx 6">
+                </div>
+                <div class="phone-info">
+                    <h3>GS Mx 6</h3>
+                    <p class="phone-price">₹29,999</p>
+                    <ul class="phone-features">
+                        <li>4800 mAh Battery</li>
+                        <li>6.6" Display</li>
+                        <li>88MP Camera</li>
+                        <li>8GB RAM</li>
+                    </ul>
+                    <button class="btn-secondary">View Details</button>
+                </div>
+            </div>
+            <div class="phone-card">
+                <div class="phone-image">
+                    <img src="{{ url_for('static', filename='images/gs-mx8.png') }}" alt="GS Mx 8">
+                </div>
+                <div class="phone-info">
+                    <h3>GS Mx 8</h3>
+                    <p class="phone-price">₹39,999</p>
+                    <ul class="phone-features">
+                        <li>5500 mAh Battery</li>
+                        <li>6.8" Display</li>
+                        <li>128MP Camera</li>
+                        <li>12GB RAM</li>
+                    </ul>
+                    <button class="btn-secondary">View Details</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <div class="cta-content">
+            <h2>Ready to Experience GS Mx 7?</h2>
+            <p>Join thousands of satisfied customers who have made the switch to GS Mx 7</p>
+            <div class="cta-buttons">
+                <button class="btn-primary">Buy Now</button>
+                <a href="{{ url_for('feedback') }}" class="btn-secondary">Share Your Feedback</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

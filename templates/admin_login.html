@@ -1,0 +1,190 @@
+{% extends "layout.html" %}
+
+{% block title %}Admin Dashboard - GS Mx 7{% endblock %}
+
+{% block content %}
+<!-- Login Section -->
+<div id="loginSection" class="login-section">
+    <div class="container">
+        <div class="login-container">
+            <div class="login-box">
+                <h2>Admin Login</h2>
+                <p>Please enter your credentials to access the dashboard</p>
+                
+                <form id="loginForm" class="login-form">
+                    <div class="form-group">
+                        <label for="adminId" class="form-label">Admin ID</label>
+                        <input type="text" id="adminId" name="adminId" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" id="password" name="password" class="form-input" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="login-btn">
+                            <span class="btn-text">Login</span>
+                            <span class="btn-loading" style="display: none;">Logging in...</span>
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Error Message Modal -->
+<div id="errorModal" class="modal" style="display: none;">
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="error-icon">⚠</span>
+            <h3>Login Failed</h3>
+        </div>
+        <div class="modal-body">
+            <p>The ID or password you entered is incorrect. Please try again.</p>
+        </div>
+        <div class="modal-footer">
+            <button id="closeModal" class="modal-btn">OK</button>
+        </div>
+    </div>
+</div>
+
+<!-- Dashboard Section -->
+<div id="dashboardSection" class="dashboard-section" style="display: none;">
+    <div class="container">
+        <div class="dashboard-header">
+            <h1>Admin Dashboard</h1>
+            <button id="logoutBtn" class="logout-btn">
+                <span class="logout-icon">🚪</span>
+                Logout
+            </button>
+        </div>
+        
+        <!-- Dashboard Stats -->
+        <div class="dashboard-stats">
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-info">
+                    <h3 id="totalFeedback">0</h3>
+                    <p>Total Feedback</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">⭐</div>
+                <div class="stat-info">
+                    <h3 id="avgRating">0.0</h3>
+                    <p>Average Rating</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">📈</div>
+                <div class="stat-info">
+                    <h3 id="todayFeedback">0</h3>
+                    <p>Today's Feedback</p>
+                </div>
+            </div>
+            
+            <div class="stat-card">
+                <div class="stat-icon">📋</div>
+                <div class="stat-info">
+                    <h3 id="unreadCount">0</h3>
+                    <p>Unread Feedback</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chart Section -->
+        <div class="chart-section">
+            <div class="chart-container">
+                <h3>Feedback Rating Distribution</h3>
+                <img src="{{ url_for('static', filename='images/chart.jpg') }}">
+            </div>
+        </div>
+        
+        <!-- Export Bar -->
+        <div class="export-bar">
+            <button id="exportCsvBtn" class="export-btn">
+                <span class="export-icon">📁</span>
+                Export to CSV
+            </button>
+        </div>
+        
+        <!-- Feedback Cards Section -->
+        <div class="feedback-cards-section">
+            <h3>User Feedback</h3>
+            <div id="feedbackCards" class="feedback-cards">
+                <!-- Sample Feedback Card -->
+                <div class="feedback-card" data-id="1">
+                    <div class="card-header">
+                        <div class="user-info">
+                            <h4>John Doe</h4>
+                            <p class="user-email">john.doe@email.com</p>
+                        </div>
+                        <div class="card-meta">
+                            <span class="feedback-date">2025-01-15 10:30 AM</span>
+                            <span class="read-status unread" title="Unread">📩</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-rating">
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star">★</span>
+                        </div>
+                        <span class="rating-value">4.0</span>
+                    </div>
+                    
+                    <div class="card-comment">
+                        <p>Great phone! The battery life is amazing and the camera quality is excellent. Quick charging works perfectly.</p>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="mark-read-btn" data-id="1">Mark as Read</button>
+                        <button class="reply-btn" data-id="1">Reply</button>
+                    </div>
+                </div>
+                
+                <!-- Sample Read Feedback Card -->
+                <div class="feedback-card" data-id="2">
+                    <div class="card-header">
+                        <div class="user-info">
+                            <h4>Jane Smith</h4>
+                            <p class="user-email">jane.smith@email.com</p>
+                        </div>
+                        <div class="card-meta">
+                            <span class="feedback-date">2025-01-14 02:15 PM</span>
+                            <span class="read-status read" title="Read">📖</span>
+                        </div>
+                    </div>
+                    
+                    <div class="card-rating">
+                        <div class="stars">
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                            <span class="star filled">★</span>
+                        </div>
+                        <span class="rating-value">5.0</span>
+                    </div>
+                    
+                    <div class="card-comment">
+                        <p>Absolutely love this phone! The performance is top-notch and the design is beautiful. Highly recommend!</p>
+                    </div>
+                    
+                    <div class="card-actions">
+                        <button class="mark-unread-btn" data-id="2">Mark as Unread</button>
+                        <button class="reply-btn" data-id="2">Reply</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

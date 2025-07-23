@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <h1>Admin Dashboard</h1>
+    <div>
+        <h2>Feedback Stats</h2>
+        <ul>
+            <li>Total Feedback: {{ stats.total }}</li>
+            <li>Average Rating: {{ stats.average }}</li>
+            <li>Recent Feedback (7 days): {{ stats.recent }}</li>
+        </ul>
+    </div>
+    <div>
+        <h2>Recent Feedback</h2>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Rating</th>
+                    <th>Comment</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for fb in feedback_list %}
+                <tr>
+                    <td>{{ fb[0] }}</td>
+                    <td>{{ fb[1] }}</td>
+                    <td>{{ fb[2] }}</td>
+                    <td>{{ fb[3] }}</td>
+                    <td>{{ fb[4] }}</td>
+                    <td>{{ fb[5] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <a href="{{ url_for('admin_logout') }}">Logout</a>
+</body>
+</html>
