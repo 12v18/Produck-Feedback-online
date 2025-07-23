@@ -56,14 +56,6 @@ A web-based feedback system for GS Mobile smartphones (GSMx5, GSMx6, GSMx7, GSMx
 - Edit templates in `/templates` for UI changes
 - Update `app.py` for backend logic
 - Add images to `/static/images` for new models/branches
-
-## Output:
-<img width="1885" height="966" alt="Image" src="https://github.com/user-attachments/assets/cc608195-bf04-4f55-bbfc-332aa5205bf4" />
-<img width="953" height="407" alt="Image" src="https://github.com/user-attachments/assets/36462635-d4c1-4cff-a0c4-6a73c62bd947" />
-<img width="951" height="410" alt="Image" src="https://github.com/user-attachments/assets/860438a8-a7da-4275-9533-11bfb1b00f4f" />
-<img width="946" height="416" alt="Image" src="https://github.com/user-attachments/assets/57b98681-043b-458e-8b51-8764fd03da96" />
-<img width="937" height="415" alt="Image" src="https://github.com/user-attachments/assets/53eef4ce-d7b6-4b38-a83c-d4267d640b09" />
-<img width="949" height="422" alt="Image" src="https://github.com/user-attachments/assets/5c208241-e5fc-4ae7-b12a-a932d1d9a04e" />
-
+- 
 ## License
 This project is for educational purposes only.
